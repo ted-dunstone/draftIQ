@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { CheckCircle, FileText, Sparkles, Shield, Zap, ChevronDown } from 'lucide-react';
+import { CheckCircle, FileText, Sparkles, Shield, Zap, ChevronDown, Files } from 'lucide-react';
 
 interface FAQItem {
   question: string;
@@ -249,7 +249,7 @@ export default function Home() {
             <div className="rounded-xl bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 p-6">
               <div className="flex items-start gap-3 mb-4">
                 <div className="p-2 rounded-lg bg-blue-50 dark:bg-blue-900/20">
-                  <FileText className="w-6 h-6 text-[#0a84ff]" />
+                  <Files className="w-6 h-6 text-[#0a84ff]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
@@ -271,7 +271,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="w-full py-8 px-6 border-t border-black/10 dark:border-white/10">
         <div className="mx-auto max-w-6xl text-center text-sm text-gray-600 dark:text-gray-400">
-          <p>&copy; 2026 DraftIQ. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} DraftIQ. All rights reserved.</p>
         </div>
       </footer>
     </div>
