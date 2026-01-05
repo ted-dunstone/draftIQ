@@ -335,6 +335,7 @@
     <script>
         // Set current year dynamically
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
         function analyzeDocument() {
             const text = document.getElementById('documentText').value;
             
@@ -344,8 +345,16 @@
             }
             
             // Placeholder for actual analysis functionality
-            const wordCount = text.trim().split(/\s+/).filter(word => word.length > 0).length;
-            alert('Document analysis feature coming soon!\n\nYour document has ' + wordCount + ' words.\n\nThis will analyze:\n• Grammar and spelling\n• Readability\n• Tone and style\n• Potential improvements');
+            const wordCount = text.trim().split(/\s+/).length;
+            alert(`Document analysis feature coming soon!
+
+Your document has ${wordCount} words.
+
+This will analyze:
+• Grammar and spelling
+• Readability
+• Tone and style
+• Potential improvements`);
         }
         
         function clearDocument() {
