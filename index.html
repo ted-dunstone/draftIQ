@@ -327,12 +327,14 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2026 DraftIQ. Intelligent document review powered by AI.</p>
+                <p>&copy; <span id="currentYear"></span> DraftIQ. Intelligent document review powered by AI.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Set current year dynamically
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
         function analyzeDocument() {
             const text = document.getElementById('documentText').value;
             
@@ -342,7 +344,8 @@
             }
             
             // Placeholder for actual analysis functionality
-            alert('Document analysis feature coming soon!\n\nYour document has ' + text.split(/\s+/).length + ' words.\n\nThis will analyze:\n• Grammar and spelling\n• Readability\n• Tone and style\n• Potential improvements');
+            const wordCount = text.trim().split(/\s+/).filter(word => word.length > 0).length;
+            alert('Document analysis feature coming soon!\n\nYour document has ' + wordCount + ' words.\n\nThis will analyze:\n• Grammar and spelling\n• Readability\n• Tone and style\n• Potential improvements');
         }
         
         function clearDocument() {
